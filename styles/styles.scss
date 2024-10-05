@@ -1,0 +1,133 @@
+@import "./variables.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: $dark-blue;
+        height: 62px;
+    }
+
+    .nav-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        &_item {
+            .icon-header {
+                color: $orange;
+            }
+            .info {
+                display: none;
+                @include desktop {
+                    display: flex;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .container-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:26px 0px 26px 26px;
+
+        .logo {
+            max-width: 30%;
+        }
+        .false-menu {
+            position: relative;
+            .list-false-menu {
+                display: none;
+            }
+            .menu-icon {
+                font-size: 25px;
+                padding-right: 26px;
+            }
+            &:hover {
+                .list-false-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 54px;
+                    background: white;
+                    min-width: 390px;
+                    padding: 0px 20px;
+
+                    >li {
+                        border-bottom: 1px solid #aeaeae;
+                        color: #aeaeae;
+                        width: 100%;
+                        text-align: center;
+                        padding: 10px;
+
+                        &:hover,:active {
+                            color: $orange;
+                        }
+                        &.active {
+                            color: $orange;
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    height: 100%;
+  
+    .principal-section {
+        height: 100%;
+        background-image: url("../images/fondo.jpg");
+        background-color: #999;
+        background-size: cover;
+        background-position: center center;
+        background-blend-mode: multiply;
+        color: white;
+        display: flex;
+    }
+    .services {
+        background-color: $white;
+    }
+    .about-us {
+        background-color: $white;
+    }
+}
+.footer {
+    background-color: $dark-blue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+
+    &_info {
+        margin: 0;
+        color: white;
+    }
+
+}

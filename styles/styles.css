@@ -1,0 +1,131 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #21242e;
+  height: 62px;
+}
+header .nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+header .nav-top_item .icon-header {
+  color: #fa573a;
+}
+header .nav-top_item .info {
+  display: none;
+}
+@media only screen and (min-width: 1333px) {
+  header .nav-top_item .info {
+    display: flex;
+    color: #ffffff;
+  }
+}
+header .container-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 0px 26px 26px;
+}
+header .container-menu .logo {
+  max-width: 30%;
+}
+header .container-menu .false-menu {
+  position: relative;
+}
+header .container-menu .false-menu .list-false-menu {
+  display: none;
+}
+header .container-menu .false-menu .menu-icon {
+  font-size: 25px;
+  padding-right: 26px;
+}
+header .container-menu .false-menu:hover .list-false-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 54px;
+  background: white;
+  min-width: 390px;
+  padding: 0px 20px;
+}
+header .container-menu .false-menu:hover .list-false-menu > li {
+  border-bottom: 1px solid #aeaeae;
+  color: #aeaeae;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+header .container-menu .false-menu:hover .list-false-menu > li:hover, header .container-menu .false-menu:hover .list-false-menu > li :active {
+  color: #fa573a;
+}
+header .container-menu .false-menu:hover .list-false-menu > li.active {
+  color: #fa573a;
+}
+header .container-menu .false-menu:hover .list-false-menu > li:last-child {
+  border-bottom: none;
+  padding-bottom: 20px;
+}
+
+main {
+  height: 100%;
+}
+main .principal-section {
+  height: 100%;
+  background-image: url("../images/fondo.jpg");
+  background-color: #999;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  color: white;
+  display: flex;
+}
+main .services {
+  background-color: #ffffff;
+}
+main .about-us {
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #21242e;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.footer_info {
+  margin: 0;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

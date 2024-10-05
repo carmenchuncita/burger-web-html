@@ -1,0 +1,11 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}/*# sourceMappingURL=variables.css.map */
