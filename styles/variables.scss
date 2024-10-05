@@ -15,26 +15,17 @@ $title-font: 'Handlee', cursive;
 
 // SCSS Mixins
 @mixin tablet {
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 576px) and (max-width: 992px) {
     @content;
   }
 }
-// Tablet horizontal
-@mixin superTablet {
-  @media (min-width: 769px) and (max-width: 992px) {
-    @content;
-  }
-}
+
 @mixin desktop {
-  @media (min-width: 993px) and (max-width: 1200px){
+  @media (min-width: 993px) {
     @content;
   }
 }
-@mixin superDesktop {
-  @media (min-width: 1201px) {
-    @content;
-  }
-}
+
 
 // Mixins flex
 %flex {
