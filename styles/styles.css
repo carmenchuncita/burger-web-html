@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 *,
 ::after,
 ::before {
@@ -10,10 +12,15 @@ a:active {
   text-decoration: none;
 }
 
-html, body {
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
 }
 
 header .navbar {
@@ -39,7 +46,7 @@ header .nav-top_item .icon-header {
 header .nav-top_item .info {
   display: none;
 }
-@media only screen and (min-width: 1333px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   header .nav-top_item .info {
     display: flex;
     color: #ffffff;
@@ -86,7 +93,8 @@ header .container-menu .false-menu:hover .list-false-menu > li {
   text-align: center;
   padding: 10px;
 }
-header .container-menu .false-menu:hover .list-false-menu > li:hover, header .container-menu .false-menu:hover .list-false-menu > li :active {
+header .container-menu .false-menu:hover .list-false-menu > li:hover,
+header .container-menu .false-menu:hover .list-false-menu > li :active {
   color: #fa573a;
 }
 header .container-menu .false-menu:hover .list-false-menu > li.active {
@@ -98,23 +106,207 @@ header .container-menu .false-menu:hover .list-false-menu > li:last-child {
 }
 
 main {
-  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+main .section-title {
+  color: #000000;
+  font-family: "Handlee", cursive;
+  font-size: 32px;
+  text-align: center;
+}
+main .section-title .emphasis {
+  color: #fa573a;
+}
+main .section-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8px;
+}
+main .section-decoration .decoration-line {
+  width: 50px;
+  height: 1px;
+  background-color: #fa573a;
+  display: inline-block;
+}
+main .section-decoration .decoration-symbol {
+  color: #fa573a;
+  font-size: 18px;
+  font-family: "Handlee", cursive;
+  font-weight: 700;
 }
 main .principal-section {
-  height: 100%;
+  height: 84vh;
   background-image: url("../images/fondo.jpg");
-  background-color: #999;
+  background-color: #777575;
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
   color: white;
   display: flex;
 }
+main .principal-section_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 24px;
+  gap: 12px;
+}
+main .principal-section_container .title {
+  color: white;
+  font-family: "Handlee", cursive;
+  font-size: 32px;
+}
+main .principal-section_container .subtitle {
+  color: #fa573a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+main .principal-section_container .call-action {
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 0.6px;
+  font-size: 16px;
+}
+main .principal-section_container .our-menu {
+  background-color: #fa573a;
+  height: 54px;
+  border: none;
+  box-shadow: none;
+  padding: 0px 20px;
+  color: #ffffff;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
+}
+main .principal-section_container .our-menu::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f30b";
+  font-weight: 900;
+  font-size: 12px;
+  color: #ffffff;
+}
+main .principal-section_container .our-menu:hover {
+  background-color: #ffffff;
+  color: #fa573a;
+}
+main .principal-section_container .our-menu:hover::after {
+  color: #fa573a;
+}
+main .principal-section_container .rrss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+main .principal-section_container .rrss .icon-rrss {
+  font-size: 32px;
+  color: #ffffff;
+}
 main .services {
   background-color: #ffffff;
+  padding: 32px 24px;
+}
+main .services_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .services_container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom: 1px solid #aeaeae;
+  gap: 12px;
+  padding: 24px 0px;
+}
+main .services_container .card_icon {
+  color: #fa573a;
+  border: 1px solid #fa573a;
+  padding: 8px;
+}
+main .services_container .card_title {
+  font-weight: bold;
+}
+main .services_container .card_info {
+  color: #878787;
+}
+main .services_container .card_btn-more {
+  color: #fa573a;
+  display: flex;
+  gap: 4px;
+}
+main .services_container .card_btn-more::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f30b";
+  font-weight: 900;
+  font-size: 12px;
+  color: #fa573a;
+}
+main .services_container .card_btn-more:hover {
+  color: #3aa5fa;
+}
+main .services_container .card_btn-more:hover::after {
+  color: #3aa5fa;
 }
 main .about-us {
   background-color: #ffffff;
+  padding: 32px 24px;
+}
+main .about-us_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+main .about-us_container .about-us-image {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .about-us_container .about-us-image .border-image {
+  border: 3px solid #fa573a;
+  transition: 1s;
+  transform: rotateZ(10deg);
+}
+main .about-us_container .about-us-image .border-image > img {
+  height: auto;
+  display: block;
+  width: 100%;
+  transform: rotateZ(-10deg);
+  transition: 1s;
+}
+main .about-us_container .about-us-image .border-image:hover {
+  border: 3px solid #fa573a;
+  transition: border 300ms ease-in-out, transform 500ms ease-in-out;
+  transform: rotateZ(0deg);
+}
+main .about-us_container .about-us-image .border-image:hover > img {
+  transform: rotateZ(0deg);
+  transition: transform 500ms ease-in-out;
+}
+main .about-us_container .about-us-title {
+  color: #000000;
+  font-weight: bold;
+}
+main .about-us_container .about-us-subtitle {
+  color: #fa573a;
+}
+main .about-us_container .about-us-info {
+  color: #878787;
 }
 
 .footer {
@@ -126,6 +318,5 @@ main .about-us {
   height: 40px;
 }
 .footer_info {
-  margin: 0;
   color: white;
 }/*# sourceMappingURL=styles.css.map */

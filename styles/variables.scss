@@ -1,7 +1,17 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
 // SCSS Variables
-$orange:#fa573a;
-$dark-blue:#21242e;
-$white:#ffffff;
+$orange: #fa573a;
+$dark-blue: #21242e;
+$grey: #aeaeae;
+$text-grey:#878787;
+$white: #ffffff;
+$black:#000000;
+$principal-font: 'Montserrat', sans-serif;
+$title-font: 'Handlee', cursive;
 
 // SCSS Mixins
 @mixin tablet {
@@ -50,5 +60,8 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
+}
+p,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
 }
 
