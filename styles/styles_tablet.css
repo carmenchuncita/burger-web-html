@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  header .container-menu {
+    padding: 26px 0px 26px 48px;
+  }
+  main .principal-section_container .title {
+    font-size: 36px;
+  }
+  main .principal-section_container .subtitle {
+    font-size: 20px;
+  }
+  main .principal-section_container .call-action {
+    font-size: 18px;
+  }
+  main .principal-section_container .our-menu {
+    font-size: 18px;
+  }
+  main .services .section-title {
+    font-size: 36px;
+  }
+  main .about-us .section-title {
+    font-size: 36px;
+  }
+  main .about-us_container .about-us-image {
+    width: 70%;
+  }
+  p {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=styles_tablet.css.map */

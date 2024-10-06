@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+@include tablet {
+
+    header {
+        .container-menu {
+            padding: 26px 0px 26px 48px;
+        }
+    }
+
+    main {
+        .principal-section {
+            &_container {
+                .title {
+                    font-size: 36px;
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .call-action {
+                    font-size: 18px;
+                }
+
+                .our-menu {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .services {
+            .section-title {
+                font-size: 36px;
+            }
+        }
+
+        .about-us {
+            .section-title {
+                font-size: 36px;
+            }
+
+            &_container {
+                .about-us-image {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 18px;
+    }
+}

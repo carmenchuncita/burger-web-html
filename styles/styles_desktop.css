@@ -16,41 +16,52 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 1020px) {
   header .navbar .nav-top_item {
     display: flex;
     gap: 6px;
+    padding: 0px 46px;
   }
   header .navbar .nav-top_item .info {
     display: block;
     color: #ffffff;
   }
   header .container-menu {
-    padding: 26px 154px;
+    padding: 26px 48px;
+    width: 95%;
   }
-  header .container-menu .false-menu {
-    position: inherit;
+  header .container-menu .false-menu-mov {
+    display: none;
   }
-  header .container-menu .false-menu .list-false-menu {
+  header .container-menu .false-menu-desktop {
+    display: block;
+  }
+  header .container-menu .false-menu-desktop .list-false-menu-desktop {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 22px;
   }
-  header .container-menu .false-menu .list-false-menu > li {
+  header .container-menu .false-menu-desktop .list-false-menu-desktop > li {
     color: #878787;
+    cursor: pointer;
   }
-  header .container-menu .false-menu .list-false-menu .active {
+  header .container-menu .false-menu-desktop .list-false-menu-desktop .active {
     color: #fa573a;
   }
-  header .container-menu .false-menu .menu-icon {
-    display: none;
+  main .principal-section {
+    justify-content: center;
+    align-items: center;
+  }
+  main .principal-section_container {
+    flex-basis: 64%;
   }
   main .services_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 350px));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(0, 315px));
+    gap: 24px;
+    padding: 24px 0px;
   }
   main .services_container .card {
     border-left: 1px solid #aeaeae;
@@ -66,8 +77,8 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 24px;
   }
   main .about-us_container .about-us-image {
-    max-width: 20%;
-    margin: 0 24px;
+    max-width: 33%;
+    margin: 0 78px 0px 24px;
   }
   main .about-us_container .about-us-content {
     flex-basis: 50%;
@@ -77,5 +88,8 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     gap: 24px;
     max-width: 420px;
+  }
+  p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=styles_desktop.css.map */

@@ -7,6 +7,8 @@
                 &_item {
                     display: flex;
                     gap: 6px;
+                    padding: 0px 46px;
+
                     .info {
                         display: block;
                         color: $white;
@@ -14,52 +16,67 @@
                 }
             }
         }
+
         .container-menu {
-            padding: 26px 154px;
-            .false-menu {
-                position:inherit;
-    
-                .list-false-menu {
+            padding: 26px 48px;
+            width: 95%;
+
+            .false-menu-mov {
+                display: none;
+            }
+
+            .false-menu-desktop {
+                display: block;
+
+                .list-false-menu-desktop {
                     display: flex;
                     list-style-type: none;
                     padding: 0;
                     margin: 0;
-                    gap:22px;
+                    gap: 22px;
+
                     >li {
                         color: $text-grey;
-                        
+                        cursor: pointer;
+
                     }
+
                     .active {
                         color: $orange;
                     }
                 }
-    
-                .menu-icon {
-                    display: none;
-                }
-    
             }
-            &:hover {
-               
-            }
-          
+
+
         }
-     
+
     }
-    
+
     main {
+        .principal-section {
+            justify-content: center;
+            align-items: center;
+
+            &_container {
+                flex-basis: 64%;
+            }
+        }
+
         .services {
             &_container {
                 display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(0, 350px));
-                    gap: 20px; 
-                    .card {
-                        border-left: 1px solid $grey ;
-                        border-bottom: none;
-                        padding: 0px 24px;
-                    }
+                grid-template-columns: repeat(auto-fit, minmax(0, 315px));
+                gap: 24px;
+                padding: 24px 0px;
+
+                .card {
+                    border-left: 1px solid $grey ;
+                    border-bottom: none;
+                    padding: 0px 24px;
+                }
             }
         }
+
         .about-us {
             &_container {
                 display: flex;
@@ -70,9 +87,10 @@
                 padding: 24px;
 
                 .about-us-image {
-                  max-width: 20%;
-                  margin:0 24px;
+                    max-width: 33%;
+                    margin: 0 78px 0px 24px;
                 }
+
                 .about-us-content {
                     flex-basis: 50%;
                     display: flex;
@@ -81,13 +99,15 @@
                     justify-content: center;
                     gap: 24px;
                     max-width: 420px;
-                  }
+                }
             }
-            
+
         }
     }
-    
-    footer {
-      
+
+    p {
+
+        font-size: 18px;
     }
-} 
+
+}

@@ -7,9 +7,9 @@
 $orange: #fa573a;
 $dark-blue: #21242e;
 $grey: #aeaeae;
-$text-grey:#878787;
+$text-grey: #878787;
 $white: #ffffff;
-$black:#000000;
+$black: #000000;
 $principal-font: 'Montserrat', sans-serif;
 $title-font: 'Handlee', cursive;
 
@@ -20,8 +20,14 @@ $title-font: 'Handlee', cursive;
   }
 }
 
+@mixin superTablet {
+  @media (min-width: 993px) and (max-width: 1019px) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: 993px) {
+  @media (min-width: 1020px) {
     @content;
   }
 }
@@ -52,7 +58,13 @@ a:visited,
 a:active {
   text-decoration: none;
 }
-p,h1,h2,h3,h4,h5,h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
-

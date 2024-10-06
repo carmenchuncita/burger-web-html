@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 *,
 ::after,
 ::before {
@@ -36,6 +38,12 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header .navbar {
   display: flex;
   align-items: center;
@@ -60,6 +68,7 @@ header .navbar .nav-top_item .info {
   display: none;
 }
 header .container-menu {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,17 +77,17 @@ header .container-menu {
 header .container-menu .logo {
   max-width: 30%;
 }
-header .container-menu .false-menu {
+header .container-menu .false-menu-mov {
   position: relative;
 }
-header .container-menu .false-menu .menu-icon {
+header .container-menu .false-menu-mov .menu-icon {
   font-size: 25px;
   padding-right: 26px;
 }
-header .container-menu .false-menu .list-false-menu {
+header .container-menu .false-menu-mov .list-false-menu {
   display: none;
 }
-header .container-menu .false-menu:hover .list-false-menu {
+header .container-menu .false-menu-mov:hover .list-false-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,23 +102,26 @@ header .container-menu .false-menu:hover .list-false-menu {
   min-width: 390px;
   padding: 0px 20px;
 }
-header .container-menu .false-menu:hover .list-false-menu > li {
+header .container-menu .false-menu-mov:hover .list-false-menu > li {
   border-bottom: 1px solid #aeaeae;
   color: #aeaeae;
   width: 100%;
   text-align: center;
   padding: 10px;
 }
-header .container-menu .false-menu:hover .list-false-menu > li:hover,
-header .container-menu .false-menu:hover .list-false-menu > li :active {
+header .container-menu .false-menu-mov:hover .list-false-menu > li:hover,
+header .container-menu .false-menu-mov:hover .list-false-menu > li :active {
   color: #fa573a;
 }
-header .container-menu .false-menu:hover .list-false-menu > li.active {
+header .container-menu .false-menu-mov:hover .list-false-menu > li.active {
   color: #fa573a;
 }
-header .container-menu .false-menu:hover .list-false-menu > li:last-child {
+header .container-menu .false-menu-mov:hover .list-false-menu > li:last-child {
   border-bottom: none;
   padding-bottom: 20px;
+}
+header .container-menu .false-menu-desktop {
+  display: none;
 }
 
 main {
@@ -284,11 +296,6 @@ main .about-us_container .about-us-image {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 576px) and (max-width: 992px) {
-  main .about-us_container .about-us-image {
-    width: 85%;
-  }
-}
 main .about-us_container .about-us-image .border-image {
   border: 3px solid #fa573a;
   transition: 1s;
@@ -310,6 +317,12 @@ main .about-us_container .about-us-image .border-image:hover > img {
   transform: rotateZ(0deg);
   transition: transform 500ms ease-in-out;
 }
+main .about-us_container .about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
 main .about-us_container .about-us-content .about-us-title {
   color: #000000;
   font-weight: bold;
@@ -319,6 +332,35 @@ main .about-us_container .about-us-content .about-us-subtitle {
 }
 main .about-us_container .about-us-content .about-us-info {
   color: #878787;
+}
+main .about-us_container .about-us-content .show-more {
+  background-color: #fa573a;
+  height: 54px;
+  border: none;
+  box-shadow: none;
+  padding: 0px 20px;
+  color: #ffffff;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
+}
+main .about-us_container .about-us-content .show-more::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f30b";
+  font-weight: 900;
+  font-size: 12px;
+  color: #ffffff;
+}
+main .about-us_container .about-us-content .show-more:hover {
+  background-color: #ffffff;
+  color: #fa573a;
+}
+main .about-us_container .about-us-content .show-more:hover::after {
+  color: #fa573a;
 }
 
 footer .footer {
@@ -349,41 +391,97 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 576px) and (max-width: 992px) {
+  header .container-menu {
+    padding: 26px 0px 26px 48px;
+  }
+  main .principal-section_container .title {
+    font-size: 36px;
+  }
+  main .principal-section_container .subtitle {
+    font-size: 20px;
+  }
+  main .principal-section_container .call-action {
+    font-size: 18px;
+  }
+  main .principal-section_container .our-menu {
+    font-size: 18px;
+  }
+  main .services .section-title {
+    font-size: 36px;
+  }
+  main .about-us .section-title {
+    font-size: 36px;
+  }
+  main .about-us_container .about-us-image {
+    width: 70%;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+@media (min-width: 1020px) {
   header .navbar .nav-top_item {
     display: flex;
     gap: 6px;
+    padding: 0px 46px;
   }
   header .navbar .nav-top_item .info {
     display: block;
     color: #ffffff;
   }
   header .container-menu {
-    padding: 26px 154px;
+    padding: 26px 48px;
+    width: 95%;
   }
-  header .container-menu .false-menu {
-    position: inherit;
+  header .container-menu .false-menu-mov {
+    display: none;
   }
-  header .container-menu .false-menu .list-false-menu {
+  header .container-menu .false-menu-desktop {
+    display: block;
+  }
+  header .container-menu .false-menu-desktop .list-false-menu-desktop {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 22px;
   }
-  header .container-menu .false-menu .list-false-menu > li {
+  header .container-menu .false-menu-desktop .list-false-menu-desktop > li {
     color: #878787;
+    cursor: pointer;
   }
-  header .container-menu .false-menu .list-false-menu .active {
+  header .container-menu .false-menu-desktop .list-false-menu-desktop .active {
     color: #fa573a;
   }
-  header .container-menu .false-menu .menu-icon {
-    display: none;
+  main .principal-section {
+    justify-content: center;
+    align-items: center;
+  }
+  main .principal-section_container {
+    flex-basis: 64%;
   }
   main .services_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 350px));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(0, 315px));
+    gap: 24px;
+    padding: 24px 0px;
   }
   main .services_container .card {
     border-left: 1px solid #aeaeae;
@@ -399,8 +497,8 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 24px;
   }
   main .about-us_container .about-us-image {
-    max-width: 20%;
-    margin: 0 24px;
+    max-width: 33%;
+    margin: 0 78px 0px 24px;
   }
   main .about-us_container .about-us-content {
     flex-basis: 50%;
@@ -409,7 +507,10 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
     justify-content: center;
     gap: 24px;
-    max-width: 250px;
+    max-width: 420px;
+  }
+  p {
+    font-size: 18px;
   }
 }
 html,

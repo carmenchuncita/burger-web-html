@@ -2,6 +2,11 @@
 
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .navbar {
         display: flex;
         align-items: center;
@@ -9,29 +14,31 @@ header {
         width: 100%;
         background-color: $dark-blue;
         height: 62px;
-    
 
-    .nav-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
 
-        &_item {
-            .icon-header {
-                color: $orange;
-            }
+        .nav-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
 
-            .info {
-                display: none;
+            &_item {
+                .icon-header {
+                    color: $orange;
+                }
+
+                .info {
+                    display: none;
+                }
             }
         }
     }
-}
+
     .container-menu {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -41,7 +48,7 @@ header {
             max-width: 30%;
         }
 
-        .false-menu {
+        .false-menu-mov {
             position: relative;
 
             .menu-icon {
@@ -69,6 +76,8 @@ header {
                     min-width: 390px;
                     padding: 0px 20px;
 
+
+
                     >li {
                         border-bottom: 1px solid $grey;
                         color: $grey;
@@ -92,6 +101,10 @@ header {
                     }
                 }
             }
+        }
+
+        .false-menu-desktop {
+            display: none;
         }
     }
 }
@@ -154,12 +167,12 @@ main {
                 font-family: $title-font;
                 font-size: 32px;
 
+
             }
 
             .subtitle {
                 color: $orange;
                 font-family: 'Montserrat', sans-serif;
-                ;
                 font-size: 18px;
                 font-weight: 400;
                 letter-spacing: 0.8px;
@@ -301,10 +314,6 @@ main {
                 align-items: center;
                 justify-content: center;
 
-                @include tablet {
-                    width: 85%;
-                }
-
                 .border-image {
                     border: 3px solid $orange;
                     transition: 1s;
@@ -330,22 +339,63 @@ main {
                     }
                 }
             }
+
             .about-us-content {
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding-top: 24px;
 
                 .about-us-title {
                     color: $black;
                     font-weight: bold;
                 }
-    
+
                 .about-us-subtitle {
                     color: $orange;
                 }
-    
+
                 .about-us-info {
                     color: $text-grey;
                 }
+
+                .show-more {
+                    background-color: #fa573a;
+                    height: 54px;
+                    border: none;
+                    box-shadow: none;
+                    padding: 0px 20px;
+                    color: #ffffff;
+                    gap: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 500;
+                    font-family: 'Varela Round', sans-serif;
+                    font-size: 16px;
+
+                    &::after {
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f30b";
+                        font-weight: 900;
+                        font-size: 12px;
+                        color: $white;
+
+                    }
+
+                    &:hover {
+                        background-color: $white;
+                        color: $orange;
+
+                        &::after {
+                            color: $orange;
+                        }
+                    }
+                }
             }
-           
+
 
         }
     }
