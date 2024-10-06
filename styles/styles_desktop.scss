@@ -65,7 +65,7 @@
         .services {
             &_container {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(0, 315px));
+                grid-template-columns: repeat(auto-fit, minmax(0, 300px));
                 gap: 24px;
                 padding: 24px 0px;
 
